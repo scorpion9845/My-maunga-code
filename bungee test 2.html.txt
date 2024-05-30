@@ -9,21 +9,18 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-image: url('https://i1.wp.com/www.bms.co.in/wp-content/uploads/2014/07/bungee-jumping.jpeg'); /* Change 'path_to_your_background_image.jpg' to the actual path of your background image */
-      background-size: cover;
-      background-position: center;
-      color: #000000; 
+      background-color: #f0f0f0; /* Change this to your desired background color */
     }
 
     .container {
       text-align: center;
       position: relative;
-      min-height: 100vh; 
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     h1 {
-      font-size: 6em; 
-      margin-top: 20vh; 
+      font-size: 3em;
     }
 
     .button-container {
@@ -59,36 +56,8 @@
       <button onclick="location.href='tower_jump.html'">Tower Jump</button>
     </div>
     <div id="gallery-button" onclick="location.href='gallery.html'">Gallery</div>
-  </div> 
+  </div>
 </body>
-</html> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
 
 
