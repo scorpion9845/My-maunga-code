@@ -1,101 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maunga club</title>
-  <style>
-    /* Reset default styles */
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-    }
+/* TIP: use one stylesheet (this one) to style all of your pages */
 
-    /* Global styles */
-    body {
-      font-family: Arial, sans-serif;
-      background-image: url('https://www.wausauhomes.com/pub/media/wysiwyg/Birch.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #ffffff;
-    }
+/* some generic styles for the whole site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* add your own font here */
+    font-family: "Sigmar One", sans-serif;
+}
 
-    .container {
-      text-align: center;
-      position: relative;
-      min-height: 100vh;
-    }
+body {
+    /* replace with your own background colour */
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
-    .container h1 {
-      font-size: 6em;
-      margin-top: 20vh;
-    }
+h1, p {
+    text-align: center;
+    color: white;
+    margin: 70px;
+}
 
-    .button-container {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px
+}
 
-    .button-container button {
-      margin: 0 10px;
-      padding: 10px 20px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    #gallery-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    .col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-  </style>
-</head>
-<body>
-
-  <div class="container"> 
-    <h1><center>Maunga club</center></h1>
-    <div class="button-container">
-      <button onclick="location.href='bungee_jump.html'">About</button>
-      <button onclick="location.href='canyon_jump.html'">Contact us</button>
-      <button onclick="location.href='tower_jump.html'">Explore</button>
-      <button onclick="location.href='tower_jump.html'">Write a review</button>
-    </div> 
-    <div id="gallery-button" onclick="location.href='gallery.html'">Gallery</div>
-  </div>
-
-</body> 
-</html>
+.center img {
+    width: 60vw;
+}
