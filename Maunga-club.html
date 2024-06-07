@@ -5,37 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maunga club</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="col.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 
 </head>
 <body> 
 
   
+  <div class="menu" >
 
-  <div class="container"> 
+
     <div class="row right"> 
         <div class="col-12">
             <button onclick="location.href='Maunga-club.html'">Home</button>
             <button onclick="location.href='chalets-preview.html'">Chalets</button>
             <button onclick="location.href='about-us.html'">Contact us</button>
-            <button onclick="location.href='bungee_jump.html'">Explore</button>
             <button onclick="location.href='signup-login.html'">Member exclusive</button>
         </div>
-    </div>
+    </div> 
+    
+  </div>
+  <div class="container">
+    
+
+  
+    
+  
+  
     <div class="row"> 
     <div class="col-12">
-    <h1>Maunga club</h1>
+      <img src="Maunga_Club_white.png" alt="" width= "60%" height= "400px">
     </div>
     <div class="row"> 
       <div class="col-12">
         <h2>Book Your Stay</h2>
-        <form id="booking-form">
+        <form id="booking-form" action="payment-page.html">
           <label for="date">Select Date:</label>
           <input type="text" id="datepicker" name="date">
           <button type="submit" class="cta-button">Book Now</button>
+          
         </form>
       </div>
     </div>
+        
     <div class="row"> 
       <div class="col-12 info-section">
         <div class="row"> 
@@ -86,9 +98,24 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
       <script>
+        /*
         $(function() {
-          $("#datepicker").datepicker();
+         $("#datepicker").datepicker();
+         
         });
+        */
+        $(function() {
+        $("#datepicker").datepicker(
+        { beforeShowDay: function(day) {
+            var day = day.getDay();
+            if (day == 1 || day == 2 || day == 3 || day == 4) {
+                return [false, "somecssclass"]
+            } else {
+                return [true, "someothercssclass"]
+            }
+        }
+        });
+    });
       </script>
     
 

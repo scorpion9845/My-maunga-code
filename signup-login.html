@@ -6,9 +6,7 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
-
-
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email], input[type=file], textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -69,37 +67,60 @@ span.psw {
 </style>
 </head>
 <body>
-  
 
 <h2>Join the Club!</h2>
 
-
-<form action="/action_page.php" method="post">
+<form action="/action_page.php" method="post" enctype="multipart/form-data">
   <div class="imgcontainer">
     <img src="Birch.jpg" alt="maunga-club" class="avatar">
   </div>
 
   <div class="container">
+    <label for="fullname"><b>Full Name</b></label>
+    <input type="text" placeholder="Enter Full Name" name="fullname" required>
+
+    <label for="address"><b>Physical Address</b></label>
+    <textarea placeholder="Enter Physical Address" name="address" required></textarea>
+
+    <label for="proof-address"><b>Proof of Address (e.g., copy of power bill)</b></label>
+    <input type="file" name="proof-address" accept="image/*,application/pdf" required>
+
+    <label for="proof-id"><b>Proof of ID (driver’s licence or passport)</b></label>
+    <input type="file" name="proof-id" accept="image/*,application/pdf" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" required>
+
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
         
-    <button type="submit">Login</button>
+    <button type="submit">Sign Up</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <button onclick="location.href='Maunga-club.html'" class="cancelbtn">Cancel</button>
-
+    <button type="button" onclick="location.href='Maunga-club.html'" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
 
-
+<div class="container">
+  <h3>Join as a Club Member</h3>
+  <p>To join as a club member, please email Club Maunga the following information:</p>
+  <ul>
+    <li>Full name</li>
+    <li>Physical address</li>
+    <li>Proof of address (e.g., copy of power bill)</li>
+    <li>Proof of ID (driver’s licence or passport)</li>
+  </ul>
+  <p>The above needs to be sent to the following Club Maunga email address:</p>
+  <p><strong>Email: <a href="mailto:maungaclub@maungaclub.maungaclub">maungaclub@maungaclub.maungaclub</a></strong></p>
+</div>
 
 </body>
-</html> 
+</html>
