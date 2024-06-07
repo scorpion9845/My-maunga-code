@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maunga club</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 
 </head>
-<body>
+<body> 
+
+  
 
   <div class="container"> 
     <div class="row right"> 
         <div class="col-12">
             <button onclick="location.href='Maunga-club.html'">Home</button>
             <button onclick="location.href='chalets-preview.html'">Chalets</button>
-            <button onclick="location.href='bungee_jump.html'">Contact us</button>
+            <button onclick="location.href='about-us.html'">Contact us</button>
             <button onclick="location.href='bungee_jump.html'">Explore</button>
             <button onclick="location.href='signup-login.html'">Member exclusive</button>
         </div>
@@ -23,6 +26,70 @@
     <div class="col-12">
     <h1>Maunga club</h1>
     </div>
+    <div class="row"> 
+      <div class="col-12">
+        <h2>Book Your Stay</h2>
+        <form id="booking-form">
+          <label for="date">Select Date:</label>
+          <input type="text" id="datepicker" name="date">
+          <button type="submit" class="cta-button">Book Now</button>
+        </form>
+      </div>
+    </div>
+    <div class="row"> 
+      <div class="col-12 info-section">
+        <div class="row"> 
+          <div class="col-12 info-section">
+            <p>Welcome to the Maunga Club, your ultimate destination for relaxation. <br> 
+              Enjoy our exclusive chalets, explore breathtaking landscapes,<br>
+               and experience unforgettable activities. Book your stay with us today!</p>
+          </div>
+        </div>
+      </div>
+      <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      <div class="footer"> 
+        
+        <div class="row"> 
+          <div class="span_12_of_12">
+            <p>Contact us: info@maungaclub.com | Follow us on
+              <a href="#">Facebook</a>, <a href="#">Twitter</a>, <a href="#">Instagram</a>
+            </p>
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="span_12_of_12">
+            <p>&copy; 2024 Maunga Club. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+        $(function() {
+          $("#datepicker").datepicker();
+        });
+      </script>
     
 
 

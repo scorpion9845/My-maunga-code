@@ -25,6 +25,8 @@
  /* Global styles */
  body {
    font-family: Roboto;
+
+   
    
  }
 
@@ -78,6 +80,14 @@
    padding: 10px 20px;
    font-size: 1em;
    cursor: pointer;
+ }
+
+ .footer{
+  position: relative;
+  border: 2px blue;
+  background-color: coral;
+  width: 100%;
+  height: auto;
  }
 
 
